@@ -1,0 +1,21 @@
+{
+    "name" : "constant-null/eloquent-changed-by-user",
+    "description" : "This simple trait written for eloquent allows you to automaticly write down id of last user changed the database record.",
+    "type": "utility",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/database": "~5.0|~5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConstantNull\\Eloquent\\Support\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mark Belotskii"
+        }
+    ]
+}
