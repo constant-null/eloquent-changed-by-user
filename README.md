@@ -4,7 +4,7 @@
 > and expects it to implement `Illuminate\Contracts\Auth\Guard` contract
 
 ## How it works
-Quite simple actually, just before saving row to database, this trait gets id of current user using `Auth::user()->id` (thats why requirements above exists) and white it to specified database field (for more specifics read the **Installation and configuration** section)
+Quite simple actually, just before saving row to database, this trait gets id of current user using `Auth::user()->id` (thats why requirements above exists) and write it to specified database field (for more specifics read the **Installation and configuration** section)
 
 ## Installation and configuration
 This trait can be installed via [composer](http://getcomposer.org/). Just add following to your `composer.json` file:
@@ -23,7 +23,7 @@ and then run:
 $ composer update
 ```
 
-To start using this trait you need import it to Eloquent model
+To start using this trait you need to import it to Eloquent model
 
 
 ```php
@@ -36,7 +36,7 @@ class SomeModel extends Model
 {
     use ChangedByUser;
 
-    /* Rest part of the your class */
+    /* The rest of the your class */
 }
 ```
 
@@ -58,7 +58,7 @@ class BestMigrationEver extends Migration
         });
     }
 ```
-How you can see in example, by default column name for user id is `changed_by`, but it can be easily changed by specifying constant CHANGED_BY in your class body.
+How you can see in example the default column name for user id is `changed_by`, but it can be easily changed by specifying constant CHANGED_BY in your class body.
 
 For example i want this column name to be 'last_user_id':
 
