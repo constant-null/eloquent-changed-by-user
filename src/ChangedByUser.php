@@ -10,7 +10,7 @@ trait ChangedByUser
      *
      * @return null
      */
-    public static function bootUpdatedByUser()
+    public static function bootChangedByUser()
     {
         static::saving(function($model) {
             if (Auth::guest()) {
