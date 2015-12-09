@@ -3,7 +3,10 @@
 > Please be aware that this trait uses `Auth` facade
 > and expects it to implement `Illuminate\Contracts\Auth\Guard` contract
 
-## Installation
+## How it works
+Quite simple actually, just before saving row to database, this trait gets id of current user using `Auth::user()->id` (thats why requirements above exists) and white it to specified database field (for more specifics read the **Installation and configuration** section)
+
+## Installation and configuration
 This trait can be installed via [composer](http://getcomposer.org/). Just add following to your `composer.json` file:
 
 ```json
