@@ -16,21 +16,11 @@ trait ChangedByUser
             if (Auth::guest()) {
                 $userId = 0;
             } else {
-                $userId = Auth::user()->{static::getUserIdField()};
+                $userId = Auth::user()->getAuthIdentifier();
             }
 
             $model->{static::getUpdatedByColumn()} = $userId;
         });
-    }
-
-    /**
-     * get name of the user's id field
-     *
-     * @return string name of id field
-     */
-    public static function getUserIdField()
-    {
-        return defined('static::USER_ID') ? static::USER_ID : 'id';
     }
 
     /**
