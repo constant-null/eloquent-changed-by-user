@@ -2,6 +2,7 @@
     "name" : "constant-null/eloquent-changed-by-user",
     "description" : "This simple trait written for eloquent allows you to automaticly write down id of last user changed the database record.",
     "type": "utility",
+    "keywords": ["laravel", "eloquent"],
     "license": "MIT",
     "minimum-stability": "stable",
     "require": {
